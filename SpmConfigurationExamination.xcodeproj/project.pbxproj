@@ -13,6 +13,11 @@
 		D34318872656390F0020C155 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D34318852656390F0020C155 /* Main.storyboard */; };
 		D3431889265639100020C155 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3431888265639100020C155 /* Assets.xcassets */; };
 		D343188C265639100020C155 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D343188A265639100020C155 /* LaunchScreen.storyboard */; };
+		D346555126568BBA00F5E378 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D346555026568BBA00F5E378 /* RealmSwift */; };
+		D346555326568BBA00F5E378 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = D346555226568BBA00F5E378 /* Realm */; };
+		D34655592656907000F5E378 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D34655582656907000F5E378 /* FirebaseAuth */; };
+		D346555B2656907000F5E378 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D346555A2656907000F5E378 /* FirebaseAnalytics */; };
+		D346555D2656907000F5E378 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D346555C2656907000F5E378 /* FirebaseFirestore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +36,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D346555326568BBA00F5E378 /* Realm in Frameworks */,
+				D34655592656907000F5E378 /* FirebaseAuth in Frameworks */,
+				D346555B2656907000F5E378 /* FirebaseAnalytics in Frameworks */,
+				D346555D2656907000F5E378 /* FirebaseFirestore in Frameworks */,
+				D346555126568BBA00F5E378 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +94,11 @@
 			);
 			name = SpmConfigurationExamination;
 			packageProductDependencies = (
+				D346555026568BBA00F5E378 /* RealmSwift */,
+				D346555226568BBA00F5E378 /* Realm */,
+				D34655582656907000F5E378 /* FirebaseAuth */,
+				D346555A2656907000F5E378 /* FirebaseAnalytics */,
+				D346555C2656907000F5E378 /* FirebaseFirestore */,
 			);
 			productName = SpmConfigurationExamination;
 			productReference = D343187C2656390F0020C155 /* SpmConfigurationExamination.app */;
@@ -113,7 +128,8 @@
 			);
 			mainGroup = D34318732656390F0020C155;
 			packageReferences = (
-				D34318932656448F0020C155 /* XCRemoteSwiftPackageReference "EasyFirebaseSwift" */,
+				D346554F26568BBA00F5E378 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				D34655572656907000F5E378 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = D343187D2656390F0020C155 /* Products */;
 			projectDirPath = "";
@@ -301,6 +317,7 @@
 					"@executable_path/Frameworks",
 				);
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_BUNDLE_IDENTIFIER = dev.fummicc1.lit.SpmConfigurationExamination;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -323,6 +340,7 @@
 					"@executable_path/Frameworks",
 				);
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_BUNDLE_IDENTIFIER = dev.fummicc1.lit.SpmConfigurationExamination;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -354,15 +372,51 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D34318932656448F0020C155 /* XCRemoteSwiftPackageReference "EasyFirebaseSwift" */ = {
+		D346554F26568BBA00F5E378 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/fummicc1/EasyFirebaseSwift";
+			repositoryURL = "https://github.com/realm/realm-cocoa";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.2.0;
+				minimumVersion = 10.7.6;
+			};
+		};
+		D34655572656907000F5E378 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D346555026568BBA00F5E378 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D346554F26568BBA00F5E378 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+		D346555226568BBA00F5E378 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D346554F26568BBA00F5E378 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		D34655582656907000F5E378 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D34655572656907000F5E378 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		D346555A2656907000F5E378 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D34655572656907000F5E378 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		D346555C2656907000F5E378 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D34655572656907000F5E378 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D34318742656390F0020C155 /* Project object */;
 }
