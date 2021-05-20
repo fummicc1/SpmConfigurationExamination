@@ -13,7 +13,6 @@
 		D34318872656390F0020C155 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D34318852656390F0020C155 /* Main.storyboard */; };
 		D3431889265639100020C155 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3431888265639100020C155 /* Assets.xcassets */; };
 		D343188C265639100020C155 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D343188A265639100020C155 /* LaunchScreen.storyboard */; };
-		D34318952656448F0020C155 /* EasyFirebaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D34318942656448F0020C155 /* EasyFirebaseSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +31,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D34318952656448F0020C155 /* EasyFirebaseSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +84,6 @@
 			);
 			name = SpmConfigurationExamination;
 			packageProductDependencies = (
-				D34318942656448F0020C155 /* EasyFirebaseSwift */,
 			);
 			productName = SpmConfigurationExamination;
 			productReference = D343187C2656390F0020C155 /* SpmConfigurationExamination.app */;
@@ -292,6 +289,8 @@
 		D3431891265639100020C155 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -301,6 +300,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.fummicc1.lit.SpmConfigurationExamination;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -311,6 +311,8 @@
 		D3431892265639100020C155 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -320,6 +322,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.fummicc1.lit.SpmConfigurationExamination;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -360,14 +363,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		D34318942656448F0020C155 /* EasyFirebaseSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D34318932656448F0020C155 /* XCRemoteSwiftPackageReference "EasyFirebaseSwift" */;
-			productName = EasyFirebaseSwift;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D34318742656390F0020C155 /* Project object */;
 }

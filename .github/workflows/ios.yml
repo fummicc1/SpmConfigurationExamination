@@ -12,4 +12,12 @@ jobs:
       - name: "Install xcpretty"
         run: gem install xcpretty
       - name: Xcode Build
-        run: set -o pipefail && xcodebuild -project SpmConfigurationExamination.xcodeproj -sdk iphonesimulator -configuration Debug -target SpmConfigurationExamination build | xcpretty      
+        run: |
+          set -o pipefail &&
+          xcodebuild 
+          -project SpmConfigurationExamination.xcodeproj           
+          -sdk iphonesimulator
+          -destination 'platform=iOS Simulator,name=iPhone 11'
+          -configuration Debug
+          -target SpmConfigurationExamination          
+          build | xcpretty
