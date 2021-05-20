@@ -15,9 +15,8 @@ jobs:
         run: |
           set -o pipefail &&
           xcodebuild 
-          -project SpmConfigurationExamination.xcodeproj           
+          -project SpmConfigurationExamination.xcodeproj
           -sdk iphonesimulator
-          -destination 'platform=iOS Simulator,name=iPhone 11'
-          -configuration Debug
           -scheme SpmConfigurationExamination
+          -configuration Debug
           clean build | xcpretty
