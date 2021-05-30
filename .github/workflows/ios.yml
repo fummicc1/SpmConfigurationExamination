@@ -14,9 +14,10 @@ jobs:
       - name: Xcode Build
         run: |
           set -o pipefail &&
-          xcodebuild 
-          -project SpmConfigurationExamination.xcodeproj
-          -sdk iphonesimulator
-          -scheme SpmConfigurationExamination
-          -configuration Debug
+          xcodebuild \
+          -project SpmConfigurationExamination.xcodeproj \
+          -sdk iphonesimulator \
+          -scheme SpmConfigurationExamination \
+          -destination 'platform=iOS Simulator,name=iPhone 12' \
+          -configuration Debug \
           clean build | xcpretty
